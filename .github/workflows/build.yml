@@ -3,6 +3,8 @@ on:
     types: started
 jobs:
   prepare_release:
+    permissions:
+      contents: write
     runs-on: ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
